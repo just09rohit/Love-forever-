@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-cursive: 'Great Vibes', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-cursive {
+  font-family: var(--font-cursive);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* 3D Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Smooth ambient floating */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(244, 63, 94, 0.2);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(244, 63, 94, 0.35);
+  }
+}
+
+@keyframes shimmerPink {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes blossomHeart {
+  0% {
+    transform: scale(0) rotate(-15deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.25) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+.animate-blossom {
+  animation: blossomHeart 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #be185d 0%, #e11d48 40%, #fb7185 70%, #be185d 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmerPink 4s linear infinite;
+}
+
+/* Light Pink Glassmorphism */
+.glass-pink {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  box-shadow: 0 20px 50px rgba(244, 114, 182, 0.15);
+}
+
+.glass-pink-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(254, 242, 248, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 113, 133, 0.25);
+  box-shadow: 0 15px 35px rgba(244, 63, 94, 0.12);
+}
+
+/* Subtle Neon Glow Effects for Buttons & Interactive Cards */
+.neon-card {
+  box-shadow: 0 0 18px rgba(244, 63, 94, 0.35), 0 12px 35px rgba(244, 63, 94, 0.18), inset 0 0 15px rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(251, 113, 133, 0.65) !important;
+}
+
+.neon-btn {
+  box-shadow: 0 0 16px rgba(244, 63, 94, 0.45), 0 0 32px rgba(236, 72, 153, 0.25) !important;
+  transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+  box-shadow: 0 0 22px rgba(244, 63, 94, 0.7), 0 0 45px rgba(236, 72, 153, 0.4) !important;
+}
+
+.neon-badge {
+  box-shadow: 0 0 14px rgba(244, 63, 94, 0.3), 0 4px 15px rgba(244, 63, 94, 0.12) !important;
+  border-color: rgba(251, 113, 133, 0.5) !important;
+}
+
+/* Custom Scrollbar for light pink aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 63, 94, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 63, 94, 0.65);
+}
+

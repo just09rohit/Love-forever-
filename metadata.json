@@ -1,0 +1,6 @@
+{
+  "name": "Forever Yours - 3D Love & Proposal Adventure",
+  "description": "An enchanting romantic proposal journey with 3D interactive games, balloon popping, scratch-off heart reveals, pop-up 3D love cards, and an unforgettable grand proposal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
